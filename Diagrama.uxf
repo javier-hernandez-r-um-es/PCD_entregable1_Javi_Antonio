@@ -1,43 +1,51 @@
-<diagram program="umletino" version="15.1"><zoom_level>6</zoom_level><element><id>UMLClass</id><coordinates><x>738</x><y>336</y><w>126</w><h>114</h></coordinates><panel_attributes>Profesores
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>340</x><y>600</y><w>210</w><h>190</h></coordinates><panel_attributes>Profesore titular
 --
 -id: Long
 _-ClassAttribute: Long_
 --
 #Operation(i: int): int
 /+AbstractOperation()/
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>888</x><y>558</y><w>126</w><h>114</h></coordinates><panel_attributes>Profesor asociado
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>680</x><y>300</y><w>210</w><h>190</h></coordinates><panel_attributes>Profesor asociado
 --
 -id: Long
 _-ClassAttribute: Long_
 --
 #Operation(i: int): int
 /+AbstractOperation()/
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>618</x><y>744</y><w>126</w><h>114</h></coordinates><panel_attributes>Investigadores
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>400</x><y>1050</y><w>210</w><h>190</h></coordinates><panel_attributes>Investigadores
 --
 -id: Long
 _-ClassAttribute: Long_
 --
 #Operation(i: int): int
 /+AbstractOperation()/
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>486</x><y>330</y><w>126</w><h>114</h></coordinates><panel_attributes>Estudiante
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>80</x><y>290</y><w>210</w><h>190</h></coordinates><panel_attributes>Estudiante
 --
 -id: Long
 _-ClassAttribute: Long_
 --
 #Operation(i: int): int
 /+AbstractOperation()/
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>618</x><y>552</y><w>126</w><h>114</h></coordinates><panel_attributes>Profesor titular
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>350</x><y>290</y><w>210</w><h>190</h></coordinates><panel_attributes>Investigador
 --
 -id: Long
 _-ClassAttribute: Long_
 --
 #Operation(i: int): int
 /+AbstractOperation()/
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>618</x><y>156</y><w>126</w><h>114</h></coordinates><panel_attributes>Persona
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>420</x><y>10</y><w>210</w><h>190</h></coordinates><panel_attributes>Persona
 --
--id: Long
-_-ClassAttribute: Long_
++Nombre:str
+-DNI: int
+-sexo:Sexo
+-Dirección:str
 --
 #Operation(i: int): int
 /+AbstractOperation()/
-</panel_attributes><additional_attributes></additional_attributes></element></diagram>
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>0</x><y>0</y><w>210</w><h>90</h></coordinates><panel_attributes>&lt;&lt;Enum&gt;&gt;
+Sexo
+--
+V
+M</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>200</x><y>60</y><w>240</w><h>40</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m1=1..*
+m2=1</panel_attributes><additional_attributes>220;10;10;10</additional_attributes></element></diagram>
