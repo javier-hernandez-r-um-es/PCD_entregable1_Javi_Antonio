@@ -1,32 +1,32 @@
-<diagram program="umletino" version="15.1"><zoom_level>5</zoom_level><help_text>Space for diagram notes</help_text><element><id>UMLClass</id><coordinates><x>310</x><y>435</y><w>105</w><h>95</h></coordinates><panel_attributes>Profesore titular (Investigador)
+<diagram program="umletino" version="15.1"><zoom_level>5</zoom_level><help_text>Space for diagram notes</help_text><element><id>UMLClass</id><coordinates><x>295</x><y>435</y><w>105</w><h>95</h></coordinates><panel_attributes>Profesore titular (Investigador)
 --
 -id: Long
 _-ClassAttribute: Long_
 --
 #Operation(i: int): int
 /+AbstractOperation()/
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>515</x><y>305</y><w>105</w><h>95</h></coordinates><panel_attributes>Profesor asociado
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>500</x><y>305</y><w>105</w><h>95</h></coordinates><panel_attributes>Profesor asociado
 --
 -id: Long
 _-ClassAttribute: Long_
 --
 #Operation(i: int): int
 /+AbstractOperation()/
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>105</x><y>240</y><w>105</w><h>95</h></coordinates><panel_attributes>Estudiante
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>90</x><y>240</y><w>105</w><h>95</h></coordinates><panel_attributes>Estudiante
 --
 -listado_asignaturas:asignatura
 +numero_expediente : str
 --
 #Operation(i: int): int
 /+AbstractOperation()/
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>305</x><y>305</y><w>105</w><h>90</h></coordinates><panel_attributes>Investigador
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>290</x><y>305</y><w>105</w><h>90</h></coordinates><panel_attributes>Investigador
 --
 -id: Long
 _-ClassAttribute: Long_
 --
 #Operation(i: int): int
 /+AbstractOperation()/
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>295</x><y>5</y><w>105</w><h>95</h></coordinates><panel_attributes>&lt;&lt;abstract&gt;&gt;
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>280</x><y>5</y><w>105</w><h>95</h></coordinates><panel_attributes>&lt;&lt;abstract&gt;&gt;
 Persona
 --
 +Nombre:str
@@ -36,13 +36,13 @@ Persona
 --
 #Operation(i: int): int
 /+AbstractOperation()/
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>95</x><y>0</y><w>105</w><h>45</h></coordinates><panel_attributes>&lt;&lt;Enum&gt;&gt;
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>80</x><y>0</y><w>105</w><h>45</h></coordinates><panel_attributes>&lt;&lt;Enum&gt;&gt;
 Sexo
 --
 V
-M</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>195</x><y>30</y><w>110</w><h>20</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+M</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>180</x><y>30</y><w>110</w><h>20</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
 m1=1..*
-m2=1</panel_attributes><additional_attributes>200;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>345</x><y>200</y><w>70</w><h>115</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>120;10;10;10;10;210</additional_attributes></element><element><id>Relation</id><coordinates><x>150</x><y>85</y><w>155</w><h>165</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>290;10;10;10;10;310</additional_attributes></element><element><id>UMLClass</id><coordinates><x>315</x><y>615</y><w>105</w><h>95</h></coordinates><panel_attributes>Asignatura
+m2=1</panel_attributes><additional_attributes>200;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>330</x><y>200</y><w>70</w><h>115</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>120;10;10;10;10;210</additional_attributes></element><element><id>Relation</id><coordinates><x>135</x><y>85</y><w>155</w><h>165</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>290;10;10;10;10;310</additional_attributes></element><element><id>UMLClass</id><coordinates><x>300</x><y>615</y><w>105</w><h>95</h></coordinates><panel_attributes>Asignatura
 --
 +Nombre:str
 +Codigo Asignatura:str
@@ -51,19 +51,19 @@ m2=1</panel_attributes><additional_attributes>200;10;10;10</additional_attribute
 + getnombre(): str
 + getcodigo(): str
 
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>350</x><y>390</y><w>15</w><h>55</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;90</additional_attributes></element><element><id>Relation</id><coordinates><x>140</x><y>330</y><w>185</w><h>360</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>335</x><y>390</y><w>15</w><h>55</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;90</additional_attributes></element><element><id>Relation</id><coordinates><x>125</x><y>330</y><w>185</w><h>360</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
 m1= 1..*
-m2= 1..*</panel_attributes><additional_attributes>20;10;10;690;350;690</additional_attributes></element><element><id>Relation</id><coordinates><x>415</x><y>395</y><w>180</w><h>295</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m2= 1..*</panel_attributes><additional_attributes>20;10;10;690;350;690</additional_attributes></element><element><id>Relation</id><coordinates><x>400</x><y>395</y><w>180</w><h>295</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
 m1= 1..*
-m2= 1..*</panel_attributes><additional_attributes>320;10;330;560;10;560</additional_attributes></element><element><id>Relation</id><coordinates><x>355</x><y>525</y><w>25</w><h>95</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m2= 1..*</panel_attributes><additional_attributes>320;10;330;560;10;560</additional_attributes></element><element><id>Relation</id><coordinates><x>340</x><y>525</y><w>25</w><h>95</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
 m1= 1..*
-m2= 1..*</panel_attributes><additional_attributes>10;10;10;170</additional_attributes></element><element><id>UMLClass</id><coordinates><x>405</x><y>150</y><w>105</w><h>95</h></coordinates><panel_attributes>MiembroDepartamento(Persona)
+m2= 1..*</panel_attributes><additional_attributes>10;10;10;170</additional_attributes></element><element><id>UMLClass</id><coordinates><x>390</x><y>150</y><w>105</w><h>95</h></coordinates><panel_attributes>MiembroDepartamento(Persona)
 --
 -departamento: Departamento
 --
 +devolverDepartamento():Departamento
 +cambioDepartamento(nuevo_departamento):None
-+devolverDatos():str</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>505</x><y>200</y><w>80</w><h>125</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;140;10;140;230</additional_attributes></element><element><id>Relation</id><coordinates><x>395</x><y>85</y><w>70</w><h>75</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;120;10;120;130</additional_attributes></element><element><id>UMLClass</id><coordinates><x>585</x><y>140</y><w>105</w><h>50</h></coordinates><panel_attributes>Departamento(Enum)
++devolverDatos():str</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>490</x><y>200</y><w>80</w><h>125</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;140;10;140;230</additional_attributes></element><element><id>Relation</id><coordinates><x>380</x><y>85</y><w>70</w><h>75</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;120;10;120;130</additional_attributes></element><element><id>UMLClass</id><coordinates><x>570</x><y>140</y><w>105</w><h>50</h></coordinates><panel_attributes>Departamento(Enum)
 --
 
 DIIC
@@ -71,9 +71,9 @@ DITEC
 DIS
 
 
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>505</x><y>165</y><w>90</w><h>20</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>490</x><y>165</y><w>90</w><h>20</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
 m1=1
-m2=1</panel_attributes><additional_attributes>10;10;160;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>790</x><y>270</y><w>305</w><h>275</h></coordinates><panel_attributes>Universidad
+m2=1</panel_attributes><additional_attributes>10;10;160;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>775</x><y>270</y><w>305</w><h>275</h></coordinates><panel_attributes>Universidad
 --
 +Nombre:str
 +Dirección:str
@@ -112,7 +112,7 @@ m2=1</panel_attributes><additional_attributes>10;10;160;10</additional_attribute
 
 
 
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>205</x><y>285</y><w>595</w><h>15</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>1170;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>620</x><y>365</y><w>180</w><h>15</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>340;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>410</x><y>490</y><w>390</w><h>15</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>760;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>405</x><y>375</y><w>395</w><h>85</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>190</x><y>285</y><w>595</w><h>15</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>1170;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>605</x><y>365</y><w>180</w><h>15</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>340;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>395</x><y>490</y><w>390</w><h>15</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>760;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>390</x><y>375</y><w>395</w><h>85</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
 m1=1
 m2=1..*
 </panel_attributes><additional_attributes>770;140;120;140;120;10;10;10</additional_attributes></element></diagram>
