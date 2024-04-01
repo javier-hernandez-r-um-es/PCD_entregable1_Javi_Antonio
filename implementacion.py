@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 class Persona:
     def __init__(self, nombre, dni, sexo, direccion):
         self.nombre = nombre
@@ -211,6 +212,14 @@ if __name__ == "__main__":
     universidad.mostrar_profesores()
     universidad.mostrar_investigadores()
 
+=======
+print("hola mundo.")
+
+print("como estas")
+
+for e in range(10):
+    print(e)
+>>>>>>> 0c87f5a28704c871b2f0c6f0bea6a61911e5ebcd
 
 
 

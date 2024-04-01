@@ -1,43 +1,118 @@
-<diagram program="umletino" version="15.1"><zoom_level>6</zoom_level><element><id>UMLClass</id><coordinates><x>738</x><y>336</y><w>126</w><h>114</h></coordinates><panel_attributes>Profesores
+<diagram program="umletino" version="15.1"><zoom_level>5</zoom_level><help_text>Space for diagram notes</help_text><element><id>UMLClass</id><coordinates><x>295</x><y>435</y><w>105</w><h>95</h></coordinates><panel_attributes>Profesore titular (Investigador)
 --
 -id: Long
 _-ClassAttribute: Long_
 --
 #Operation(i: int): int
 /+AbstractOperation()/
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>888</x><y>558</y><w>126</w><h>114</h></coordinates><panel_attributes>Profesor asociado
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>500</x><y>305</y><w>105</w><h>95</h></coordinates><panel_attributes>Profesor asociado
 --
 -id: Long
 _-ClassAttribute: Long_
 --
 #Operation(i: int): int
 /+AbstractOperation()/
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>618</x><y>744</y><w>126</w><h>114</h></coordinates><panel_attributes>Investigadores
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>90</x><y>240</y><w>105</w><h>95</h></coordinates><panel_attributes>Estudiante
+--
+-listado_asignaturas:asignatura
++numero_expediente : str
+--
+#Operation(i: int): int
+/+AbstractOperation()/
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>290</x><y>305</y><w>105</w><h>90</h></coordinates><panel_attributes>Investigador
 --
 -id: Long
 _-ClassAttribute: Long_
 --
 #Operation(i: int): int
 /+AbstractOperation()/
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>486</x><y>330</y><w>126</w><h>114</h></coordinates><panel_attributes>Estudiante
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>280</x><y>5</y><w>105</w><h>95</h></coordinates><panel_attributes>&lt;&lt;abstract&gt;&gt;
+Persona
 --
--id: Long
-_-ClassAttribute: Long_
---
-#Operation(i: int): int
-/+AbstractOperation()/
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>618</x><y>552</y><w>126</w><h>114</h></coordinates><panel_attributes>Profesor titular
---
--id: Long
-_-ClassAttribute: Long_
++Nombre:str
+-DNI: str
+-sexo:Sexo
+-Dirección:str
 --
 #Operation(i: int): int
 /+AbstractOperation()/
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>618</x><y>156</y><w>126</w><h>114</h></coordinates><panel_attributes>Persona
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>80</x><y>0</y><w>105</w><h>45</h></coordinates><panel_attributes>&lt;&lt;Enum&gt;&gt;
+Sexo
 --
--id: Long
-_-ClassAttribute: Long_
+V
+M</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>180</x><y>30</y><w>110</w><h>20</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m1=1..*
+m2=1</panel_attributes><additional_attributes>200;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>330</x><y>200</y><w>70</w><h>115</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>120;10;10;10;10;210</additional_attributes></element><element><id>Relation</id><coordinates><x>135</x><y>85</y><w>155</w><h>165</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>290;10;10;10;10;310</additional_attributes></element><element><id>UMLClass</id><coordinates><x>300</x><y>615</y><w>105</w><h>95</h></coordinates><panel_attributes>Asignatura
 --
-#Operation(i: int): int
-/+AbstractOperation()/
-</panel_attributes><additional_attributes></additional_attributes></element></diagram>
++Nombre:str
++Codigo Asignatura:str
+
+--
++ getnombre(): str
++ getcodigo(): str
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>335</x><y>390</y><w>15</w><h>55</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;90</additional_attributes></element><element><id>Relation</id><coordinates><x>125</x><y>330</y><w>185</w><h>360</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1= 1..*
+m2= 1..*</panel_attributes><additional_attributes>20;10;10;690;350;690</additional_attributes></element><element><id>Relation</id><coordinates><x>400</x><y>395</y><w>180</w><h>295</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1= 1..*
+m2= 1..*</panel_attributes><additional_attributes>320;10;330;560;10;560</additional_attributes></element><element><id>Relation</id><coordinates><x>340</x><y>525</y><w>25</w><h>95</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1= 1..*
+m2= 1..*</panel_attributes><additional_attributes>10;10;10;170</additional_attributes></element><element><id>UMLClass</id><coordinates><x>390</x><y>150</y><w>105</w><h>95</h></coordinates><panel_attributes>MiembroDepartamento(Persona)
+--
+-departamento: Departamento
+--
++devolverDepartamento():Departamento
++cambioDepartamento(nuevo_departamento):None
++devolverDatos():str</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>490</x><y>200</y><w>80</w><h>125</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;140;10;140;230</additional_attributes></element><element><id>Relation</id><coordinates><x>380</x><y>85</y><w>70</w><h>75</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;120;10;120;130</additional_attributes></element><element><id>UMLClass</id><coordinates><x>570</x><y>140</y><w>105</w><h>50</h></coordinates><panel_attributes>Departamento(Enum)
+--
+
+DIIC
+DITEC
+DIS
+
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>490</x><y>165</y><w>90</w><h>20</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m1=1
+m2=1</panel_attributes><additional_attributes>10;10;160;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>775</x><y>270</y><w>305</w><h>275</h></coordinates><panel_attributes>Universidad
+--
++Nombre:str
++Dirección:str
+-listado_estudiantes:list of Estudiante
+-listado_profesores: list of ProfesorTitular, ProfesorAsociado
+-listado_investigadores: list of Investigadores
+-listado_asignaturas: list of Asignatura
+--
++devolverMiembro(identificador):ProfesorTitular, ProfesorAsociado, Investigador
++devolverEstudiante(numero_expedeinte): Estdiante
++devolverAsignatura(codigoAsignatura):Asignatura
++incorporar_estudiante(nombre_estudiante, direccion, dni, numero_expediente, sexo):
++incorporar_profesor(nombre, direccion, dni, identificador, sexo, tipo, departamento, area_investigacion = None):
++incorporar_investigador(nombre, direccion, dni, identificador, sexo, departamento, area_investigacion)
++incorporara_asignatura(nombre, codigo_asignatura, creditos, carrera, curso, departamento): ESTO NO
++mostrar_estudiantes()
++mostrar_investigadores()
++mostrar_profesores_titulares()
++mostrar_profesores_asociados()
++mostrar_profesores()
++mostrar_asignaturas_departamento()
++mostrar_miembros_departamento()
++eliminar_estudiante(numero_expediente)
++eliminar_miembro(identificador)
++eliminar_asignatura(codigp)
++cambiarDepartamento(deparatamentoActual, departamentoNuevo)
++matricular(numero_expediente, codigoAsignatura)
++desmatricular(identificadorEstudiante, codigoAsignatura)
++vincularProfesorAsignatura(codigoAsignatura, identificadorProfesor)
++eliminarProfesorAsigantura(codigoAsignatura, identificadorProfesor)
++cambiarIdentificador(identificador, nuevo_identificador)
++cambiarNumeroExpediente(numero_expediente, nuevo_numero_expediente)
++cambiarCodigoAsignatura(codigo, codigo_nuevo)
++calcularMatricula(numero_expediente)
+
+
+
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>190</x><y>285</y><w>595</w><h>15</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>1170;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>605</x><y>365</y><w>180</w><h>15</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>340;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>395</x><y>490</y><w>390</w><h>15</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes><additional_attributes>760;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>390</x><y>375</y><w>395</w><h>85</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m1=1
+m2=1..*
+</panel_attributes><additional_attributes>770;140;120;140;120;10;10;10</additional_attributes></element></diagram>
