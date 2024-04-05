@@ -3,7 +3,10 @@ class Persona:
         self.nombre = nombre
         self.dni = dni
         self.direccion = direccion
-        self.sexo = sexo
+        if sexo not in ["V","M"]:
+            raise ValueError("El valor 'sexo' solo puede tomar valores V (varón) o M (mujer)")
+        else:
+            self.sexo = sexo
 
     def getNombre(self):
         return self.nombre
@@ -198,24 +201,26 @@ departamento1 = Departamento.DIIC
 departamento2 = Departamento.DITEC
 departamento3 = Departamento.DIS
 
-persona1 = Persona("Juan", "12345678A", "Calle Mayor 1", "M")
-persona2 = Persona("María", "87654321B", "Avenida Principal 10", "F")
+persona1 = Persona("Juan", "12345678A", "Calle Mayor 1", "V")
+persona2 = Persona("María", "87654321B", "Avenida Principal 10", "M")
 
-estudiante1 = Estudiante("Pedro", "98765432C", "Plaza España 5", "M", "2021001")
-estudiante2 = Estudiante("Ana", "65432109D", "Paseo de la Castellana 20", "F", "2021002")
 
-profesor_asociado1 = ProfesorAsociado("Carlos", "45678901E", "Avenida Libertad 15", "M", 1, departamento1)
-profesor_asociado2 = ProfesorAsociado("Elena", "34567890F", "Calle Real 30", "F", 2, departamento2)
 
-profesor_titular1 = ProfesorTitular("Luis", "21098765G", "Calle Mayor 2", "M", 3, departamento3, "Inteligencia Artificial")
-profesor_titular2 = ProfesorTitular("Laura", "10987654H", "Avenida Principal 11", "F", 4, departamento1, "Redes de Computadoras")
+estudiante1 = Estudiante("Pedro", "98765432C", "Plaza España 5", "V", "2021001")
+estudiante2 = Estudiante("Ana", "65432109D", "Paseo de la Castellana 20", "M", "2021002")
+
+profesor_asociado1 = ProfesorAsociado("Carlos", "45678901E", "Avenida Libertad 15", "V", 1, departamento1)
+profesor_asociado2 = ProfesorAsociado("Elena", "34567890F", "Calle Real 30", "M", 2, departamento2)
+
+profesor_titular1 = ProfesorTitular("Luis", "21098765G", "Calle Mayor 2", "V", 3, departamento3, "Inteligencia Artificial")
+profesor_titular2 = ProfesorTitular("Laura", "10987654H", "Avenida Principal 11", "M", 4, departamento1, "Redes de Computadoras")
 
 asignatura1 = Asignatura("Programación", "PROG101", 6, "Informática", 1, departamento1)
 asignatura2 = Asignatura("Base de Datos", "BD101", 6, "Informática", 2, departamento2)
 
 gestor_universidad = GestorUniversidad()
 
-# Añadir y eliminar miembros de departamento y estudiantes
+# añadimos y eliminamos miembros de departamentosx y estudiantes
 gestor_universidad.añadirMiembroDepartamento(profesor_asociado1)
 gestor_universidad.añadirMiembroDepartamento(profesor_asociado2)
 gestor_universidad.añadirMiembroDepartamento(profesor_titular1)
@@ -228,7 +233,6 @@ gestor_universidad.añadirEstudiante(estudiante2)
 
 gestor_universidad.eliminarEstudiante(estudiante2)
 
-# Mostrar información
 print("Lista de miembros de departamento:")
 for miembro in gestor_universidad.lista_miembros_departamento:
     print(miembro.getNombre())
