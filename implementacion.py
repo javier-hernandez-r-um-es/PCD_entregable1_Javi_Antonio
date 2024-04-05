@@ -1,3 +1,11 @@
+############## EXCEPCIONES #####3
+
+class ErrorDeFormato(Exception):
+    """Excepción debida a errores en el formato de los datos."""
+    pass
+
+
+
 class Persona:
     def __init__(self, nombre, dni, direccion, sexo):
         self.nombre = nombre
@@ -7,6 +15,19 @@ class Persona:
             raise ValueError("El valor 'sexo' solo puede tomar valores V (varón) o M (mujer)")
         else:
             self.sexo = sexo
+
+        if sexo not in ["V", "M"]:
+            raise ErrorDeFormato("El sexo debe ser 'V' (varón) o 'M' (mujer).")
+        self.sexo = sexo
+
+        lista_dni = []
+        lista_dni.append(dni)
+
+        for i in lista_dni:
+            if len(i)!= 9:
+                raise ErrorDeFormato("El DNI debe tener 9 dígitos.")
+            elif i  in lista_dni:
+                raise ErrorDeFormato("El DNI debe ser único.")
 
     def getNombre(self):
         return self.nombre
@@ -202,6 +223,7 @@ departamento2 = Departamento.DITEC
 departamento3 = Departamento.DIS
 
 persona1 = Persona("Juan", "12345678A", "Calle Mayor 1", "V")
+<<<<<<< HEAD
 persona2 = Persona("María", "87654321B", "Avenida Principal 10", "M")
 
 
@@ -214,6 +236,18 @@ profesor_asociado2 = ProfesorAsociado("Elena", "34567890F", "Calle Real 30", "M"
 
 profesor_titular1 = ProfesorTitular("Luis", "21098765G", "Calle Mayor 2", "V", 3, departamento3, "Inteligencia Artificial")
 profesor_titular2 = ProfesorTitular("Laura", "10987654H", "Avenida Principal 11", "M", 4, departamento1, "Redes de Computadoras")
+=======
+persona2 = Persona("María", "12345878A", "Avenida Principal 10", "V")
+
+estudiante1 = Estudiante("Pedro", "98765432C", "Plaza España 5", "V", "2021001")
+estudiante2 = Estudiante("Ana", "65432109D", "Paseo de la Castellana 20", "V", "2021002")
+
+profesor_asociado1 = ProfesorAsociado("Carlos", "45678901E", "Avenida Libertad 15", "V", 1, departamento1)
+profesor_asociado2 = ProfesorAsociado("Elena", "34567890F", "Calle Real 30", "V", 2, departamento2)
+
+profesor_titular1 = ProfesorTitular("Luis", "21098765G", "Calle Mayor 2", "V", 3, departamento3, "Inteligencia Artificial")
+profesor_titular2 = ProfesorTitular("Laura", "10987654H", "Avenida Principal 11", "V", 4, departamento1, "Redes de Computadoras")
+>>>>>>> 421f2540c3999555a35edb4d5208ab3b1f0661ff
 
 asignatura1 = Asignatura("Programación", "PROG101", 6, "Informática", 1, departamento1)
 asignatura2 = Asignatura("Base de Datos", "BD101", 6, "Informática", 2, departamento2)
@@ -239,4 +273,4 @@ for miembro in gestor_universidad.lista_miembros_departamento:
 
 print("\nLista de estudiantes:")
 for estudiante in gestor_universidad.lista_estudiantes:
-    print(estudiante.getNombre())
+    print(estudiante.getDNI())
