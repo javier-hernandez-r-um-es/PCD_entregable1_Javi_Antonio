@@ -204,7 +204,7 @@ class Asignatura:
 
     def setDepartamento(self, departamento):
         self.departamento = departamento
-class GestorUniversidad:
+class Universidad:
     def __init__(self):
         self.lista_miembros_departamento = []
         self.lista_estudiantes = []
@@ -245,25 +245,25 @@ profesor_titular2 = ProfesorTitular("Laura", "10987654H", "Avenida Principal 11"
 asignatura1 = Asignatura("Programación", "PROG101", 6, "Informática", 1, departamento1)
 asignatura2 = Asignatura("Base de Datos", "BD101", 6, "Informática", 2, departamento2)
 
-gestor_universidad = GestorUniversidad()
+universidad = Universidad()
 
 # añadimos y eliminamos miembros de departamentosx y estudiantes
-gestor_universidad.añadirMiembroDepartamento(profesor_asociado1)
-gestor_universidad.añadirMiembroDepartamento(profesor_asociado2)
-gestor_universidad.añadirMiembroDepartamento(profesor_titular1)
-gestor_universidad.añadirMiembroDepartamento(profesor_titular2)
+universidad.añadirMiembroDepartamento(profesor_asociado1)
+universidad.añadirMiembroDepartamento(profesor_asociado2)
+universidad.añadirMiembroDepartamento(profesor_titular1)
+universidad.añadirMiembroDepartamento(profesor_titular2)
 
-gestor_universidad.eliminarMiembroDepartamento(profesor_titular2)
+universidad.eliminarMiembroDepartamento(profesor_titular2)
 
-gestor_universidad.añadirEstudiante(estudiante1)
-gestor_universidad.añadirEstudiante(estudiante2)
+universidad.añadirEstudiante(estudiante1)
+universidad.añadirEstudiante(estudiante2)
 
-gestor_universidad.eliminarEstudiante(estudiante2)
+universidad.eliminarEstudiante(estudiante2)
 
 print("Lista de miembros de departamento:")
-for miembro in gestor_universidad.lista_miembros_departamento:
+for miembro in universidad.lista_miembros_departamento:
     print(miembro.getNombre())
 
 print("\nLista de estudiantes:")
-for estudiante in gestor_universidad.lista_estudiantes:
+for estudiante in universidad.lista_estudiantes:
     print(estudiante.getDNI())
