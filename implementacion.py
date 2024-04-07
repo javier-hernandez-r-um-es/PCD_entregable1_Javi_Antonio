@@ -2,7 +2,6 @@
 ############### Ejercicio de Programación Orientada a Objetos con Python ###################
 ####################### Grado en Ciencia e Ingenieria de Datos #######################
 
-
 #------------------------- clases ---------------------------#
 
 class ErrorDeFormato(Exception):
@@ -342,6 +341,7 @@ class Universidad:
             self.lista_estudiantes.remove(estudiante)
 
 
+
 #---------------------------- PRUEBA DEL CODIGO ------------------------------#
 
 
@@ -351,6 +351,7 @@ departamento3 = "DIS"
 
 persona1 = Persona("Juan", "12345678A", "Calle Mayor 1", "V")
 persona2 = Persona("María", "12355678A", "Avenida Principal 10", "M")
+
 
 
 estudiante1 = Estudiante("Pedro", "98765432C", "Plaza España 5", "V", "2021001")
