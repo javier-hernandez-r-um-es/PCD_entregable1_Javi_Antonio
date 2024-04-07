@@ -1,0 +1,121 @@
+<diagram program="umletino" version="15.1"><zoom_level>3</zoom_level><help_text>Persona no estudiante</help_text><element><id>UMLClass</id><coordinates><x>374</x><y>353</y><w>63</w><h>57</h></coordinates><panel_attributes>Profesore titular (Investigador)
+--
+     - listadoAsignaturas: list of Asignatura
+--
+    + getListadoAsignaturas(): list of Asignatura
+    + setListadoAsignaturas(listadoAsignaturas: list of Asignatura): void
+    + impartirAsignatura(asignatura: Asignatura): void
+    + dejarDeImpartirAsignatura(asignatura: Asignatura): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>482</x><y>275</y><w>126</w><h>57</h></coordinates><panel_attributes>ProfesorAsociado(MiembroDepartamento)
+--
+     - listadoAsignaturas: list of Asignatura
+--
+    + getListadoAsignaturas(): list of Asignatura
+    + setListadoAsignaturas(listadoAsignaturas: list of Asignatura): void
+    + impartirAsignatura(asignatura: Asignatura): void
+    + dejarDeImpartirAsignatura(asignatura: Asignatura): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>251</x><y>236</y><w>105</w><h>57</h></coordinates><panel_attributes>    Estudiante(Persona)
+--
+    - NumeroExpediente: string
+    - listadoAsignaturas: list of Asignatura
+--
+    + getNumeroExpediente(): string
+    + setNumeroExpediente(numeroExpediente: string): void
+    + getListadoAsignaturas(): list of Asignatura
+    + setListadoAsignaturas(listadoAsignaturas: list of Asignatura): void
+    + matricular(asignatura: Asignatura): void
+    + desmatricular(asignatura: Asignatura): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>371</x><y>275</y><w>102</w><h>54</h></coordinates><panel_attributes>    Investigador(MiembroDepartamento)
+--
+    - areaInvestigacion: string
+--
+    + getAreaInvestigacion(): string
+    + setAreaInvestigacion(areaInvestigacion: string): void</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>365</x><y>95</y><w>63</w><h>78</h></coordinates><panel_attributes>&lt;&lt;abstract&gt;&gt;
+Persona
+--
+    - Nombre: string
+    - DNI: string
+    - Dirección: string
+    - Ssexo: Sexo
+--
+    + getNombre(): string
+    + getDNI(): string
+    + getDirección(): string
+    + getSexo(): char
+    + setNombre(nombre: string): void
+    + setDNI(dni: string): void
+    + setDirección(dirección: string): void
+    + setSexo(sexo: char): void
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>245</x><y>92</y><w>63</w><h>27</h></coordinates><panel_attributes>&lt;&lt;Enum&gt;&gt;
+Sexo
+--
+V
+M</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>305</x><y>110</y><w>66</w><h>12</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m1=1..*
+m2=1</panel_attributes><additional_attributes>200;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>395</x><y>212</y><w>42</w><h>69</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>120;10;10;10;10;210</additional_attributes></element><element><id>Relation</id><coordinates><x>278</x><y>143</y><w>93</w><h>99</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>290;10;10;10;10;310</additional_attributes></element><element><id>UMLClass</id><coordinates><x>377</x><y>461</y><w>105</w><h>102</h></coordinates><panel_attributes>    Asignatura
+--
+    - nombre: string
+    - codigoAsignatura: string
+    - creditos: int
+    - carrera: string
+    - curso: int
+    - departamento: Departamento
+--
+    + getNombre(): string
+    + setNombre(nombre: string): void
+    + getCodigoAsignatura(): string
+    + setCodigoAsignatura(codigoAsignatura: string): void
+    + getCreditos(): int
+    + setCreditos(creditos: int): void
+    + getCarrera(): string
+    + setCarrera(carrera: string): void
+    + getCurso(): int
+    + setCurso(curso: int): void
+    + getDepartamento(): Departamento
+    + setDepartamento(departamento: Departamento): void
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>398</x><y>326</y><w>9</w><h>33</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;90</additional_attributes></element><element><id>Relation</id><coordinates><x>272</x><y>290</y><w>111</w><h>216</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1= 1..*
+m2= 1..*</panel_attributes><additional_attributes>20;10;10;690;350;690</additional_attributes></element><element><id>Relation</id><coordinates><x>479</x><y>329</y><w>54</w><h>177</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1= 1..*
+m2= 1..*</panel_attributes><additional_attributes>140;10;140;560;10;560</additional_attributes></element><element><id>Relation</id><coordinates><x>401</x><y>407</y><w>15</w><h>57</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+m1= 1..*
+m2= 1..*</panel_attributes><additional_attributes>10;10;10;170</additional_attributes></element><element><id>UMLClass</id><coordinates><x>431</x><y>182</y><w>63</w><h>57</h></coordinates><panel_attributes>MiembroDepartamento(Persona)
+--
+    - id: long
+    - departamento: Departamento
+--
+    + getId(): long
+    + setId(id: long): void
+    + getDepartamento(): Departamento
+    + setDepartamento(departamento: Departamento): void
+    + devolverDatos(): string</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>491</x><y>212</y><w>48</w><h>75</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;140;10;140;230</additional_attributes></element><element><id>Relation</id><coordinates><x>425</x><y>143</y><w>42</w><h>45</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;120;10;120;130</additional_attributes></element><element><id>UMLClass</id><coordinates><x>539</x><y>176</y><w>63</w><h>30</h></coordinates><panel_attributes>Departamento(Enum)
+--
+
+DIIC
+DITEC
+DIS
+
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>491</x><y>191</y><w>54</w><h>12</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m1=1
+m2=1</panel_attributes><additional_attributes>10;10;160;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>632</x><y>254</y><w>183</w><h>165</h></coordinates><panel_attributes>Universidad
+--
+    - lista_miembros_departamento: list of MiembroDepartamento
+    - lista_estudiantes: list of Estudiante
+--
+    + añadirMiembroDepartamento(miembro: MiembroDepartamento): void
+    + eliminarMiembroDepartamento(miembro: MiembroDepartamento): void
+    + añadirEstudiante(estudiante: Estudiante): void
+    + eliminarEstudiante(estudiante: Estudiante): void
+    + cambiarMiembroDepartamento(miembro: MiembroDepartamento): void
+
+
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>353</x><y>263</y><w>285</w><h>12</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m1=1..*
+m2=1</panel_attributes><additional_attributes>930;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>605</x><y>311</y><w>33</w><h>12</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m1=1..*
+m2=1</panel_attributes><additional_attributes>90;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>434</x><y>386</y><w>204</w><h>12</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m1=1..*
+m2=1</panel_attributes><additional_attributes>660;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>464</x><y>326</y><w>174</w><h>42</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-
+m1=1..*
+m2=1
+</panel_attributes><additional_attributes>560;110;10;110;10;10</additional_attributes></element></diagram>
