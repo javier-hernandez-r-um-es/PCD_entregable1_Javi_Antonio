@@ -204,6 +204,8 @@ class Asignatura:
 
     def setDepartamento(self, departamento):
         self.departamento = departamento
+
+
 class Universidad:
     def __init__(self):
         self.lista_miembros_departamento = []
@@ -217,10 +219,18 @@ class Universidad:
             self.lista_miembros_departamento.remove(miembro)
 
     def añadirEstudiante(self, estudiante):
-        self.lista_estudiantes.append(estudiante)
+
+        if estudiante in self.lista_estudiantes:
+            raise ErrorDeFormato("El estudiante ya está añadido.")
+        else:
+            self.lista_estudiantes.append(estudiante)
+
 
     def eliminarEstudiante(self, estudiante):
-        if estudiante in self.lista_estudiantes:
+
+        if estudiante not in self.lista_estudiantes:
+            raise ErrorDeFormato("El estudiante no está añadido")
+        else:
             self.lista_estudiantes.remove(estudiante)
 
 ###### PRUEBA ##########3
