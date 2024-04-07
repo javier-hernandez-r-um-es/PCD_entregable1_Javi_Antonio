@@ -1,4 +1,9 @@
-############## EXCEPCIONES #####3
+
+############### Ejercicio de Programación Orientada a Objetos con Python ###################
+####################### Grado en Ciencia e Ingenieria de Datos #######################
+
+
+#------------------------- CLASES ---------------------------#
 
 class ErrorDeFormato(Exception):
     """Excepción debida a errores en el formato de los datos."""
@@ -49,10 +54,16 @@ class Persona:
 
 
 class Estudiante(Persona):
+    numeros_expedientes = []
+
     def __init__(self, nombre, dni, direccion, sexo, numero_expediente):
         super().__init__(nombre, dni, direccion, sexo)
         self.numero_expediente = numero_expediente
         self.listado_asignaturas = []
+        if numero_expediente in Estudiante.numeros_expedientes:
+            raise ErrorDeFormato("El número de expediente debe ser único.")
+        else:
+            Estudiante.numeros_expedientes.append(numero_expediente)
 
     def getNumeroExpediente(self):
         return self.numero_expediente
@@ -84,10 +95,23 @@ class Estudiante(Persona):
 
 
 class MiembroDepartamento(Persona):
+    id_lista = []
+
     def __init__(self, nombre, dni, direccion, sexo, id, departamento):
         super().__init__(nombre, dni, direccion, sexo)
         self.id = id
         self.departamento = departamento
+
+        if id in MiembroDepartamento.id_lista:
+            raise ErrorDeFormato("El ID debe ser único.")
+        else:
+            MiembroDepartamento.id_lista.append(id)
+
+
+        departamentos = [ "DIIC", "DITEC", "DIS"]
+
+        if departamento not in departamentos:
+            raise ErrorDeFormato("El departamento no es valido")
 
     def getId(self):
         return self.id
@@ -104,10 +128,6 @@ class MiembroDepartamento(Persona):
     def devolverDatos(self):
         return f"ID: {self.id}, Nombre: {self.nombre}, Departamento: {self.departamento}"
     
-class Departamento:
-    DIIC = "DIIC"
-    DITEC = "DITEC"
-    DIS = "DIS"
 
 
 
@@ -135,11 +155,20 @@ class ProfesorTitular(Investigador):
         self.listado_asignaturas = listado_asignaturas
 
     def impartirAsignatura(self, asignatura):
-        self.listado_asignaturas.append(asignatura)
+        if asignatura in self.listado_asignaturas:
+            raise ErrorDeFormato("La asignatura ya está impartida")
+        else:
+            self.listado_asignaturas.append(asignatura)
+    
 
     def dejarDeImpartirAsignatura(self, asignatura):
-        if asignatura in self.listado_asignaturas:
+
+        if asignatura not in self.listado_asignaturas:
+            raise ErrorDeFormato("La asignatura no está impartida.")
+        else:
             self.listado_asignaturas.remove(asignatura)
+
+     
 
 class ProfesorAsociado(MiembroDepartamento):
     def __init__(self, nombre, dni, direccion, sexo, id, departamento):
@@ -153,11 +182,17 @@ class ProfesorAsociado(MiembroDepartamento):
         self.listado_asignaturas = listado_asignaturas
 
     def impartirAsignatura(self, asignatura):
-        self.listado_asignaturas.append(asignatura)
+        if asignatura in self.listado_asignaturas:
+            raise ErrorDeFormato("La asignatura ya está impartida")
+        else:
+            self.listado_asignaturas.append(asignatura)
 
     def dejarDeImpartirAsignatura(self, asignatura):
-        if asignatura in self.listado_asignaturas:
+        if asignatura not in self.listado_asignaturas:
+            raise ErrorDeFormato("La asignatura no está impartiendose")
+        else:
             self.listado_asignaturas.remove(asignatura)
+       
 
 
 class Asignatura:
@@ -212,11 +247,24 @@ class Universidad:
         self.lista_estudiantes = []
 
     def añadirMiembroDepartamento(self, miembro):
-        self.lista_miembros_departamento.append(miembro)
 
-    def eliminarMiembroDepartamento(self, miembro):
         if miembro in self.lista_miembros_departamento:
-            self.lista_miembros_departamento.remove(miembro)
+            raise ErrorDeFormato("El miembro ya está añadido")
+        else:
+            self.lista_miembros_departamento.append(miembro)
+        
+    def eliminarMiembroDepartamento(self, miembro):
+
+        if miembro not in self.lista_miembros_departamento:
+            raise ErrorDeFormato("El miembro no está añadido")
+        else:
+            self.lista_miembros_departamento.remove(miembro)    
+
+    
+    def cambiarMiembroDepartamento(self, miembro):
+
+
+
 
     def añadirEstudiante(self, estudiante):
 
@@ -233,10 +281,13 @@ class Universidad:
         else:
             self.lista_estudiantes.remove(estudiante)
 
-###### PRUEBA ##########3
-departamento1 = Departamento.DIIC
-departamento2 = Departamento.DITEC
-departamento3 = Departamento.DIS
+
+#---------------------------- PRUEBA DEL CODIGO ------------------------------#
+
+
+departamento1 = "DIIC"
+departamento2 = "DITEC"
+departamento3 = "DIS"
 
 persona1 = Persona("Juan", "12345678A", "Calle Mayor 1", "V")
 persona2 = Persona("María", "12355678A", "Avenida Principal 10", "M")
@@ -277,3 +328,15 @@ for miembro in universidad.lista_miembros_departamento:
 print("\nLista de estudiantes:")
 for estudiante in universidad.lista_estudiantes:
     print(estudiante.getDNI())
+
+
+ #-------------------------------------------------------------- #
+ 
+
+       
+                                # AUTORES #
+
+#                                 Antonio Barea Rodríguez: a.barearodriguez@um.es
+#                                 Javier Hernandez Rosique: javier.hernandezr@um.es
+
+#  Copyright (c) All rights reserved.
